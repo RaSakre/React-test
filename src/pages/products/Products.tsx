@@ -76,7 +76,9 @@ const Products = () => {
       </div>
       <ul className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4 mb-4">
         {isLoading && <p>Loading...</p>}
-        {error && <p>Error: {error.status}</p>}
+        {error && (
+          <p>Error: {"status" in error ? error.status : "An error occurred"}</p>
+        )}
         {filteredProducts?.length ? (
           filteredProducts?.map((product) => (
             <li
