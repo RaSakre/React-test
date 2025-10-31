@@ -1,0 +1,14 @@
+.icon {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+
+
+.icons__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+

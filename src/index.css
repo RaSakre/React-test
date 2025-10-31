@@ -1,0 +1,18 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@import url(./assets/fonts/fonts.css);
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(207, 202, 202);
+  height: 100%;
+}
+
+
