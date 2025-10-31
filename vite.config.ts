@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   base:
     process.env.NODE_ENV === "production"
-      ? "/React-test/" // замените на название вашего репозитория
+      ? "/React-test/" 
       : "/",
   resolve: {
     alias: {

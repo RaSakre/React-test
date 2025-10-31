@@ -18,7 +18,7 @@ export const productsApi = createApi({
     }),
     getProductById: builder.query<IProduct, number>({
       query: (id) => `/products/${id}`,
-      providesTags: (result, error, id) => [{ type: "Product", id }],
+      providesTags: (_result, _error, id) => [{ type: "Product", id }],
     }),
     deleteProduct: builder.mutation<void, number>({
       query: (id) => ({
