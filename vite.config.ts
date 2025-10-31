@@ -6,7 +6,10 @@ import { fileURLToPath } from "node:url";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: 'React-test',
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/React-test/" // замените на название вашего репозитория
+      : "/",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

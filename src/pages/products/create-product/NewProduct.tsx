@@ -10,7 +10,7 @@ import { addProduct } from "@/redux/products-slice";
 
 export const NewProduct = () => {
   const dispatch = useDispatch();
-  const { data: products } = useGetProductsQuery("4");
+  useGetProductsQuery("4");
   const [formData, setFormData] = useState({
     id: Date.now(),
     title: "",
@@ -20,7 +20,7 @@ export const NewProduct = () => {
     image: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [, setSelectedFile] = useState<File | null>(null);
 
   const handleBlur = (fieldName: string) => {
     const value = formData[fieldName as keyof typeof formData];
